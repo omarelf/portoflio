@@ -1,0 +1,144 @@
+.header{
+    height: 95vh;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(126,213,111,0.6),
+        rgba(40 ,180, 131,0.6)
+        
+    ),
+    url(../../assets/img1.jpg);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0 , 100% 0 , 100% 75vh , 0 100%);
+    position: relative;
+
+    
+    
+}
+
+.logo-box{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo{
+    height: 80px;
+    width: 90px;
+}
+
+
+.heading-primary{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.heading-primary-main{
+ display: block;
+ font-size: 60px;
+ font-weight: 400;
+ letter-spacing: 35px;
+ animation-name: moveToLeft;
+ animation-duration: 1s;
+}
+
+.heading-primary-sub{ 
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 11px;
+    animation-name: moveToRight;
+    animation-duration: 1s;
+
+}
+
+.text-box{
+    position : absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.primary-button{
+    position: relative;
+    padding: 10px;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: transparent;
+    background-color: #fff;
+    top: 90%;
+    left: 30%;
+    //transform: translate(-50%,-50%);
+    animation-name: moveToTop;
+    animation-duration: 1s;
+
+    //backface-visibility : hidden, to make the shake invisible when transforming an element
+
+
+}
+.primary-button:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 20px 30px rgba(95, 70, 70, 0.2) ;
+}
+
+.primary-button:active{
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) ;
+}
+
+@keyframes moveToLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+
+    }
+
+    80%{
+        opacity: 0.5;
+        transform: translateX(20px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+ @keyframes moveToRight {
+     0%{
+         opacity: 0;
+         transform: translateX(100px);
+     }
+
+     80%{
+         opacity: 0.5;
+         transform: translateX(-20px);
+
+
+
+     }
+
+     100%{
+         opacity: 1;
+         transform: translate(0);
+     }
+ }
+
+ @keyframes moveToTop {
+     0%{
+        opacity: 0;
+        transform: translateY(100px);
+     }
+
+     80%{
+        opacity: 0.5;
+        transform: translateY(-20px);
+     }
+
+     100%{
+        opacity: 1;
+        transform: translate(0);
+     }
+ }

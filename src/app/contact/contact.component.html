@@ -1,0 +1,32 @@
+<section class="contact-section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p class="subtitle">Let's connect and work together!</p>
+      <nz-form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <nz-form-item>
+          <nz-form-label nzFor="name" style="margin-left: 319px;">Name</nz-form-label>
+          <nz-form-control nzErrorTip="Name is required">
+            <input nz-input formControlName="name" id="name" placeholder="Your Name" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label nzFor="email" style="margin-left: 319px;">Email</nz-form-label>
+          <nz-form-control nzErrorTip="Valid email is required">
+            <input nz-input formControlName="email" id="email" placeholder="Your Email" />
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-label nzFor="message" style="margin-left: 319px;">Message</nz-form-label>
+          <nz-form-control nzErrorTip="Message is required">
+            <textarea nz-input formControlName="message" id="message" placeholder="Your Message"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <button nz-button nzType="primary" type="submit">Send Message</button>
+          </nz-form-control>
+        </nz-form-item>
+      </nz-form>
+    </div>
+  </section>
+  
